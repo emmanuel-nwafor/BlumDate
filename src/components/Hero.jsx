@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <>
         <Header />
-        <section className="h-screen bg-cover bg-center flex flex-col justify-center items-center text-center text-white relative hero-overlay" style={{ backgroundImage: "url('/src/assets/hero.jpg')" }}>
+        <section className="h-screen bg-cover bg-center flex flex-col justify-center items-center text-center text-white relative hero-overlay" style={{ backgroundImage: "url(/src/assets/hero.jpg)" }}>
             <div className="max-w-3xl mx-auto px-4 z-10">
                 <h1 className="text-3xl md:text-5xl font-bold mb-4 custom-font animate-fade-in-up delay-200">
                 Every Great Love Story Begins with a Simple Hello

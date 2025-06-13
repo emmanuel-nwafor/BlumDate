@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import logo from '../assets/logo.png'
 
 export default function Header() {
   return (
     <>
         <header className="absolute top-0 left-0 w-full flex justify-between items-center p-4 z-10">
-            <img src="/src/assets/logo.png" alt="Blum-date Logo" className="h-8 animate-fade-in-up" />
+            <img src={logo} alt="Blum-date Logo" className="h-8 animate-fade-in-up" />
 
             <div className="flex">
                 <Link to="/" className="max-md:text-sm m-2 text-white">
