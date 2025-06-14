@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '/src/assets/logo.png'
+import AppStores from './AppStores';
 
 export default function Footer() {
   return (
@@ -8,17 +9,10 @@ export default function Footer() {
         {/* Mobile Layout */}
         <div className="md:hidden flex flex-col items-center space-y-6">
           <div className="flex items-center">
-            <img src={logo} alt="" />
+            <img src={logo} alt="" className='h-14' />
           </div>
           
-          <div className="flex space-x-4">
-            <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
-              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-12" />
-            </a>
-            <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
-              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" className="h-12" />
-            </a>
-          </div>
+          <AppStores />
           <div className="flex flex-col space-y-2 text-center">
             <a href="#" className="hover:text-purple-400">Terms of Service</a>
             <a href="#" className="hover:text-purple-400">Privacy Policy</a>
@@ -50,22 +44,15 @@ export default function Footer() {
         </div>
 
         {/* Desktop Layout */}
-        <div className="flex justify-between p-6">
+        <div className="flex justify-between p-6 max-md:hidden">
             <div className="flex items-center">
               <img src={logo} alt="" className='h-14' />
             </div>
 
-            <div className="flex space-x-6">
-              <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
-                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" className="h-12" />
-              </a>
-              <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
-                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" className="h-12" />
-              </a>
-            </div>
+            <AppStores />
         </div>
 
-        <hr />
+        <hr className='max-md:hidden' />
 
         <div className="p-6 hidden md:flex md:flex-row md:justify-between md:items-center">
           <div className="flex flex-col space-y-">
@@ -100,7 +87,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <p className="text-sm p-5">Copyright © 2025 Blumdate. All rights reserved.</p>
+        <p className="text-sm p-5 max-md:hidden">Copyright © 2025 Blumdate. All rights reserved.</p>
       </div>
     </footer>
   );

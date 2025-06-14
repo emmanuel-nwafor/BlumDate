@@ -15,7 +15,7 @@ export default function Testimonials() {
       author: 'Rachel & James',
     },
     {
-      image: '/src/assets/testimonial3.jpg', // Replace with the third image path (couple with pet)
+      image: 'https://res.cloudinary.com/dbczfoqnc/image/upload/v1749845769/testimonial1_dkrkr0.jpg',
       quote: '"We paired on Blumdate. Our first date was natural, a walk in the park, the conversations deeper. Now he loves my pet."',
       author: 'Lina & Ethan',
     },
@@ -87,13 +87,13 @@ export default function Testimonials() {
         {/* Desktop Buttons */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-x-[100px] bg-white bg-opacity-50 text-black rounded-full p-3 hover:bg-opacity-75 transition md:flex hidden"
+          className="absolute left-4 top-1/2 transform -translate-x-[15px] bg-white bg-opacity-50 text-black rounded-full p-3 hover:bg-opacity-75 transition md:flex hidden"
         >
           <i className='bx bx-arrow-back text-purple-700'></i>
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform translate-x-[100px] bg-white bg-opacity-50 text-black rounded-full p-3 hover:bg-opacity-75 transition md:flex hidden"
+          className="absolute right-4 top-1/2 transform translate-x-[15px] bg-white bg-opacity-50 text-black rounded-full p-3 hover:bg-opacity-75 transition md:flex hidden"
         >
           <i className='bx bx-arrow-back bx-rotate-180 text-purple-700' ></i>
         </button>

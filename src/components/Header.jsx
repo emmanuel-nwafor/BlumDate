@@ -114,11 +114,13 @@ export default function Header() {
                 <Link to="/" className="text-xl hover:text-purple-400 text-white" onClick={toggleMenu}>
                   Contact Us
                 </Link>
+                <hr />
               </motion.div>
               <motion.div variants={linkVariants}>
                 <Link to="/" className="text-xl hover:text-purple-400 text-white" onClick={toggleMenu}>
                   About Us
                 </Link>
+                <hr />
               </motion.div>
               <motion.div variants={buttonVariants}>
                 <a href="#" className="text-pink-500 hover:text-purple-700 bg-gray-200 px-6 py-3 rounded-full" onClick={toggleMenu}>
