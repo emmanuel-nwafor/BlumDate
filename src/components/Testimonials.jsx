@@ -5,12 +5,12 @@ export default function Testimonials() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const testimonials = [
     {
-      image: '/src/assets/testimonial1.jpg', // Replace with the first image path (couple at picnic)
+      image: 'https://res.cloudinary.com/dbczfoqnc/image/upload/v1749845337/4b28601c830887a7f8ec2ba8ad92a5f3586b8c05_1_gzs0lt.jpg', 
       quote: '"We both Liked Each Other on Blumdate. Our first date was a picnic under the trees. He made me laugh so hard I forgot to be nervous."',
       author: 'Sarah & Daniel',
     },
     {
-      image: '/src/assets/testimonial2.jpg', // Replace with the second image path (couple chatting)
+      image: 'https://res.cloudinary.com/dbczfoqnc/image/upload/v1749845376/b70f4a9032e8465bc13270fcda99dbda81951ca6_ju3vlb.jpg',
       quote: '"We got chatting and he complimented my smile, and I nearly didn’t reply. Now we text every morning before work."',
       author: 'Rachel & James',
     },
