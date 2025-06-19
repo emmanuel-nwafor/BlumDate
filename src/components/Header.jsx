@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion'; // Import AnimatePresence for conditional rendering
 import logo from '../assets/logo.png';
+import AppStores from './AppStores';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,12 +54,12 @@ export default function Header() {
           animate="visible"
         >
           <motion.div variants={linkVariants}>
-            <Link to="/" className="max-md:text-sm m-2 text-white">
+            <Link to="/contact" className="max-md:text-sm m-2 text-white">
               Contact Us
             </Link>
           </motion.div>
           <motion.div variants={linkVariants}>
-            <Link to="/" className="max-md:text-sm m-2 text-white">
+            <Link to="/about" className="max-md:text-sm m-2 text-white">
               About Us
             </Link>
           </motion.div>
@@ -95,41 +96,86 @@ export default function Header() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
-              className="md:hidden fixed top-0 left-0 w-full h-screen backdrop-blur-3xl text-white p-4 z-50 flex flex-col items-center justify-center space-y-6"
+              className="md:hidden fixed top-0 left-0 w-full h-screen bg-pink-300 text-black p-6 z-50 flex flex-col"
               variants={menuVariants}
               initial="hidden"
               animate="visible"
               exit="exit"
             >
-              <motion.button
-                onClick={toggleMenu}
-                className="absolute top-4 right-4 text-3xl"
-                variants={buttonVariants}
-                initial="hidden"
-                animate="visible"
-              >
-                <i className='bx bx-x text-white'></i>
-              </motion.button>
-              <motion.div variants={linkVariants}>
-                <Link to="/" className="text-xl hover:text-purple-400 text-white" onClick={toggleMenu}>
-                  Contact Us
-                </Link>
-                <hr />
-              </motion.div>
-              <motion.div variants={linkVariants}>
-                <Link to="/" className="text-xl hover:text-purple-400 text-white" onClick={toggleMenu}>
-                  About Us
-                </Link>
-                <hr />
-              </motion.div>
-              <motion.div variants={buttonVariants}>
-                <a href="#" className="text-pink-500 hover:text-purple-700 bg-gray-200 px-6 py-3 rounded-full" onClick={toggleMenu}>
-                  Download App
-                </a>
-              </motion.div>
+              {/* Top Row: Logo and Close Button */}
+              <div className="flex justify-between items-center mb-6">
+                <motion.img
+                  src={logo}
+                  alt="Blum-date Logo"
+                  className="h-8"
+                  variants={logoVariants}
+                  initial="hidden"
+                  animate="visible"
+                />
+                <motion.button
+                  onClick={toggleMenu}
+                  className="text-3xl"
+                  variants={buttonVariants}
+                  initial="hidden"
+                  animate="visible"
+                >
+                  <i className='bx bx-x text-black'></i>
+                </motion.button>
+              </div>
+
+              {/* Navigation Links */}
+              <div className="flex flex-col space-y-6 mb-auto pl-1 text-[17px] font-medium">
+                <motion.div variants={linkVariants}>
+                  <Link to="/about" className="hover:underline" onClick={toggleMenu}>
+                    About Us
+                  </Link>
+                </motion.div>
+                <motion.div variants={linkVariants}>
+                  <Link to="/contact" className="hover:underline" onClick={toggleMenu}>
+                    Contact Us
+                  </Link>
+                </motion.div>
+              </div>
+
+              {/* Socials + App Stores + Footer */}
+              <div className="space-y-6">
+                {/* Social Icons */}
+                <div className="flex space-x-4 text-2xl">
+                  <a href="#"><i className='bx bxl-facebook'></i></a>
+                  <a href="#"><i className='bx bxl-linkedin'></i></a>
+                  <a href="#"><i className='bx bxl-instagram'></i></a>
+                  <a href="#"><i className='bx bxl-twitter'></i></a>
+                  <a href="#"><i className='bx bxl-youtube'></i></a>
+                  <a href="#"><i className='bx bxl-tiktok'></i></a>
+                </div>
+
+                {/* App Store Buttons */}
+                <div className="flex justify- gap-4">
+                  <a href="#" class="bg-black rounded-lg p-2 flex items-center justify-center animate-fade-in-up delay-200">
+                      <i className='bx bxl-apple text-white text-4xl'></i>            
+                      <p className="text-white text-[10px] ml-2">
+                          Download on the <br />
+                          <span className="text-sm">App Store</span>
+                      </p>
+                  </a>
+                  <a href="#" className="bg-black rounded-lg p-2 flex items-center justify-center animate-fade-in-up delay-400">
+                      <i className='bx bxl-play-store text-white text-4xl'></i>            
+                      <p className="text-white text-[10px] ml-2">
+                          Get it on <br />
+                          <span className="text-sm">Google Play</span>
+                      </p>
+                  </a>
+                </div>
+
+                {/* Copyright */}
+                <p className="text-xs text-gray-600">
+                  Copyright © 2025. Blumdate. All rights reserved.
+                </p>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
+
       </header>
     </>
   );
