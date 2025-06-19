@@ -37,14 +37,16 @@ export default function Header() {
     <>
       <header className="absolute top-0 left-0 w-full flex justify-between items-center p-4 z-10">
         {motion}
-        <motion.img
-          src={logo}
-          alt="Blum-date Logo"
-          className="h-10"
-          variants={logoVariants}
-          initial="hidden"
-          animate="visible"
-        />
+        <Link to="/">
+          <motion.img
+            src={logo}
+            alt="Blum-date Logo"
+            className="h-10"
+            variants={logoVariants}
+            initial="hidden"
+            animate="visible"
+          />
+        </Link>
 
         {/* Desktop Links with Animation */}
         <motion.div
@@ -104,14 +106,16 @@ export default function Header() {
             >
               {/* Top Row: Logo and Close Button */}
               <div className="flex justify-between items-center mb-6">
-                <motion.img
-                  src={logo}
-                  alt="Blum-date Logo"
-                  className="h-8"
-                  variants={logoVariants}
-                  initial="hidden"
-                  animate="visible"
-                />
+                <Link to="/">
+                  <motion.img
+                    src={logo}
+                    alt="Blum-date Logo"
+                    className="h-8"
+                    variants={logoVariants}
+                    initial="hidden"
+                    animate="visible"
+                  />
+                </Link>
                 <motion.button
                   onClick={toggleMenu}
                   className="text-3xl"
