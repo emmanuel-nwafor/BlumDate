@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion'; // Import AnimatePresence for conditional rendering
-import logo from '../assets/logo.png';
+import logo from '../assets/fav.png';
 
-export default function Header() {
+export default function Header2() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -36,7 +36,7 @@ export default function Header() {
     <>
       <header className="absolute top-0 left-0 w-full flex justify-between items-center p-4 z-10">
         {motion}
-        <Link to="/">
+        <Link to="/" className="flex items-center ">
           <motion.img
             src={logo}
             alt="Blum-date Logo"
@@ -45,6 +45,9 @@ export default function Header() {
             initial="hidden"
             animate="visible"
           />
+          <p className="text-xl text-black font-bold m-1">
+            Blumdate
+          </p>
         </Link>
 
         {/* Desktop Links with Animation */}
@@ -55,12 +58,12 @@ export default function Header() {
           animate="visible"
         >
           <motion.div variants={linkVariants}>
-            <Link to="/contact" className="max-md:text-sm m-2 text-white">
+            <Link to="/contact" className="max-md:text-sm m-2 text-black">
               Contact Us
             </Link>
           </motion.div>
           <motion.div variants={linkVariants}>
-            <Link to="/about" className="max-md:text-sm m-2 text-white">
+            <Link to="/about" className="max-md:text-sm m-2 text-black">
               About Us
             </Link>
           </motion.div>
@@ -76,7 +79,7 @@ export default function Header() {
           <motion.a
             href="#"
             variants={buttonVariants}
-            className="text-pink-500 hover:text-purple-700 bg-gray-200 px-6 py-3 max-md:py-1 max-md:px-[6px] rounded-full"
+            className="text-white bg-purple-700 px-6 py-3 max-md:py-1 max-md:px-[6px] rounded-full"
           >
             Download App
           </motion.a>
@@ -85,7 +88,7 @@ export default function Header() {
         {/* Mobile Menu Toggle */}
         <motion.button
           onClick={toggleMenu}
-          className="md:hidden focus:outline-none text-3xl text-white"
+          className="md:hidden focus:outline-none text-3xl text-black"
           variants={buttonVariants}
           initial="hidden"
           animate="visible"
