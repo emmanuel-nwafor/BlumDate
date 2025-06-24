@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion'; // Import AnimatePresence for conditional rendering
-import logo from '../assets/logo.png';
+import logo from '../assets/fav.png';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,7 +36,7 @@ export default function Header() {
     <>
       <header className="absolute top-0 left-0 w-full flex justify-between items-center p-4 z-10">
         {motion}
-        <Link to="/">
+        <Link to="/" className="flex items-center">
           <motion.img
             src={logo}
             alt="Blum-date Logo"
@@ -45,6 +45,9 @@ export default function Header() {
             initial="hidden"
             animate="visible"
           />
+          <p className="text-xl text-white font-bold m-1">
+            Blumdate
+          </p>
         </Link>
 
         {/* Desktop Links with Animation */}
@@ -97,7 +100,7 @@ export default function Header() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
-              className="md:hidden fixed top-0 left-0 w-full h-screen bg-pink-300 text-black p-6 z-50 flex flex-col"
+              className="md:hidden fixed top-0 left-0 w-full h-screen bg-white text-black p-6 z-50 flex flex-col"
               variants={menuVariants}
               initial="hidden"
               animate="visible"
@@ -105,7 +108,7 @@ export default function Header() {
             >
               {/* Top Row: Logo and Close Button */}
               <div className="flex justify-between items-center mb-6">
-                <Link to="/">
+                <Link to="/" className="flex items-center">
                   <motion.img
                     src={logo}
                     alt="Blum-date Logo"
@@ -114,6 +117,9 @@ export default function Header() {
                     initial="hidden"
                     animate="visible"
                   />
+                  <p className="text-xl text-black font-bold m-1">
+                    Blumdate
+                  </p>
                 </Link>
                 <motion.button
                   onClick={toggleMenu}

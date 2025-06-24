@@ -93,14 +93,14 @@ export default function Header2() {
           initial="hidden"
           animate="visible"
         >
-          <i className='bx bx-menu'></i>
+          <i className='bx bx-menu text-black'></i>
         </motion.button>
 
         {/* Mobile Dropdown Menu with AnimatePresence */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
-              className="md:hidden fixed top-0 left-0 w-full h-screen bg-pink-300 text-black p-6 z-50 flex flex-col"
+              className="md:hidden fixed top-0 left-0 w-full h-screen bg-white text-black p-6 z-50 flex flex-col"
               variants={menuVariants}
               initial="hidden"
               animate="visible"
@@ -108,7 +108,7 @@ export default function Header2() {
             >
               {/* Top Row: Logo and Close Button */}
               <div className="flex justify-between items-center mb-6">
-                <Link to="/">
+                <Link to="/" className="flex items-center">
                   <motion.img
                     src={logo}
                     alt="Blum-date Logo"
@@ -117,6 +117,9 @@ export default function Header2() {
                     initial="hidden"
                     animate="visible"
                   />
+                  <p className="text-xl text-black font-bold m-1">
+                    Blumdate
+                  </p>
                 </Link>
                 <motion.button
                   onClick={toggleMenu}
