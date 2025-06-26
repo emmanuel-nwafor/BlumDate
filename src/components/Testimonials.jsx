@@ -6,12 +6,12 @@ export default function Testimonials() {
   const testimonials = [
     {
       image: 'https://res.cloudinary.com/dbczfoqnc/image/upload/v1749845769/testimonial1_dkrkr0.jpg',
-      quote: '"We both Liked Each Other on Blumdate. Our first date was a picnic under the trees. He made me laugh so hard I forgot to be nervous."',
+      quote: '"We got chatting and he complimented my smile, and I nearly didn’t reply. Now we text every morning before work."',
       author: 'Sarah & Daniel',
     },
     {
-      image: 'https://res.cloudinary.com/dbczfoqnc/image/upload/v1749845376/b70f4a9032e8465bc13270fcda99dbda81951ca6_ju3vlb.jpg',
-      quote: '"We got chatting and he complimented my smile, and I nearly didn’t reply. Now we text every morning before work."',
+      image: 'https://res.cloudinary.com/dbczfoqnc/image/upload/v1750943290/WhatsApp_Image_2025-06-25_at_1.47.39_PM_fg7oro.jpg',
+      quote: '"We both Liked Each Other on Blumdate. Our first date was a picnic under the trees. He made me laugh so hard I forgot to be nervous."',
       author: 'Rachel & James',
     },
     {

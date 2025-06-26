@@ -19,27 +19,33 @@ export default function AboutUs() {
       <div className="flex flex-col md:flex-row items-center justify-center gap-6 px-4 py-10 md:px-10">
         <div className="w-full md:w-1/2">
           <div
-            className="rounded-xl bg-[url('/src/assets/testimonial3.jpg')] bg-cover bg-center h-[300px] sm:h-[400px] md:h-[500px] w-full"
+            className="rounded-xl bg-[url('/src/assets/about1.jpg')] bg-cover bg-center h-[300px] sm:h-[400px] md:h-[500px] w-full"
           />
         </div>
         <div className="w-full md:w-1/2 text-justify text-sm sm:text-base">
           <h2 className="font-bold text-xl">
-            Our Story
+             About Blumdate
           </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Lectus sed enim nunc ultricies posuere
-            cursus nisi velit netus. Consectetur tincidunt ullamcorper amet vestibulum 
-            in platea turpis pharetra accumsan. Varius etiam nisl nunc semper. Purus 
-            rhoncus turpis quis egestas nisl sed ultricies neque morbi. Mauris ut dolor 
-            amet sed et ac viverra sagittis. Fames et ut eget sit pellentesque urna. 
-            Egestas nulla facilisi mauris platea nunc mattis sagittis duis placerat.
-            Massa sit quis elit scelerisque ornare feugiat. Nisl et diam dictum ligula
-            tellus eget ridiculus lacus. Accumsan vulputate habitant sagittis volutpat
-            id tellus id ut. Ultricies id feugiat metus sed volutpat eleifend. Nec et 
-            euismod diam blandit in quis libero a.
-            Aliquet imperdiet bibendum pretium sed egestas potenti. Elementum pulvinar 
-            libero id ac cum senectus ullamcorper neque. Non tellus sit sed.
-          </p>
+          <span> 
+            Blumdate brings singles together who are truly searching for meaningful relationships. Through 
+            verified profiles and a welcoming community, we help you connect with real people ready for 
+            lasting love.
+          </span>
+
+          <br /><br />
+
+          <h2 className="font-bold text-xl">
+            A kind of spark
+          </h2>
+          <span>
+            What sets Blumdate apart is our commitment to connecting you with real, genuine people. 
+            Every photo is verified to keep fake profiles out, ensuring a safer experience. Our matching goes 
+            beyond surface level — we focus on shared values and interests to help you find partners who 
+            truly fit you. Safety is a priority with 24/7 moderation and easy in-app reporting, giving you 
+            peace of mind while you explore connections. To help you feel the chemistry early, we offer 
+            video introductions so you can see and hear potential matches before chatting. It’s all designed 
+            to help you build real, lasting relationship. 
+          </span>
         </div>
       </div>
 
@@ -47,27 +53,27 @@ export default function AboutUs() {
       <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-6 px-4 py-10 md:px-10">
         <div className="w-full md:w-1/2">
           <div
-            className="rounded-xl bg-[url('/src/assets/testimonial2.jpg')] bg-cover bg-center h-[300px] sm:h-[400px] md:h-[500px] w-full"
+            className="rounded-xl bg-[url('src/assets/about2.jpg')] bg-cover bg-center h-[300px] sm:h-[400px] md:h-[500px] w-full"
           />
         </div>
         <div className="w-full md:w-1/2 text-justify text-sm sm:text-base">
-          <h2 className="font-bold text-xl">
-            Our Story
+        <h2 className="font-bold text-xl">
+             Core Values
           </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Lectus sed enim nunc ultricies posuere
-            cursus nisi velit netus. Consectetur tincidunt ullamcorper amet vestibulum 
-            in platea turpis pharetra accumsan. Varius etiam nisl nunc semper. Purus 
-            rhoncus turpis quis egestas nisl sed ultricies neque morbi. Mauris ut dolor 
-            amet sed et ac viverra sagittis. Fames et ut eget sit pellentesque urna. 
-            Egestas nulla facilisi mauris platea nunc mattis sagittis duis placerat.
-            Massa sit quis elit scelerisque ornare feugiat. Nisl et diam dictum ligula
-            tellus eget ridiculus lacus. Accumsan vulputate habitant sagittis volutpat
-            id tellus id ut. Ultricies id feugiat metus sed volutpat eleifend. Nec et 
-            euismod diam blandit in quis libero a.
-            Aliquet imperdiet bibendum pretium sed egestas potenti. Elementum pulvinar 
-            libero id ac cum senectus ullamcorper neque. Non tellus sit sed.
-          </p>
+          <span>
+            At Blumdate, we believe in the little things that make connections feel real—honest moments, 
+            thoughtful conversations, and the quiet comfort of being seen. We know that finding someone 
+            isn’t about perfection; it’s about feeling understood, welcomed, and open to something 
+            meaningful. This space is for everyone, no matter where you’re from or who you love. Because 
+            at the end of the day, we all just want something that feels right. 
+
+            She didn’t expect much that day—just another scroll, another face. But there he was. Not flashy, 
+            not rehearsed. Just real. Their first chat was about music, and somehow it turned into talking 
+            until sunrise. It wasn’t instant magic, but it was easy. Familiar. Weeks passed. They shared 
+            playlists, inside jokes, quiet thoughts. When they finally met, it felt like they’d known each other 
+            for years. That’s how love begins sometimes—not loud, but steady. And it all started with one 
+            quiet “hey.” 
+          </span>
         </div>
       </div>
 
